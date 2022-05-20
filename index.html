@@ -26,10 +26,19 @@
         animation
         .add({
             targets : '#btn',
-            top: '100px',
+            top: '1500px',
             duration: 500,
             easing:'easeInOutSine'
         })
+
+        .add({
+            targets : '#stars',
+            top: '0px',
+            duration: 1000,
+            easing:'easeInOutSine'
+        })
+
+        document.querySelector('#btn').onclick = animation.play;
     </script>
 </body>
 </html>
