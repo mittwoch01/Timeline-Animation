@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="Style.css">
 </head>
 <body>
-    <section>
+    <!-- 움직이는 순 대로 나열 -->
+    <section> 
         <img src="./assets_02/stars.png" id="stars">
         <img src="./assets_02/moon.png" id="moon">
         <img src="./assets_02/mountains_behind.png" id="mountains_behind">
@@ -17,6 +18,8 @@
         <img src="./assets_02/mountains_front.png" id="mountains_front">
     </section>
 
+
+    <!-- js anime.min.js 라이브러리 사용 -->
     <script src="./assets_02/anime.min.js"></script>
     <script>
         var animation = anime.timeline({
@@ -34,6 +37,41 @@
         .add({
             targets : '#stars',
             top: '0px',
+            duration: 1000,
+            easing:'easeInOutSine'
+        })
+
+        .add({
+            targets : '#mountains_behind',
+            bottom: '0px',
+            duration: 1000,
+            easing:'easeInOutSine'
+        })
+
+        .add({
+            targets : '#moon',
+            top: '0px',
+            duration: 1000,
+            easing:'easeInOutSine'
+        })
+
+        .add({
+            targets : '#mountains_front',
+            bottom: '0px',
+            duration: 1000,
+            easing:'easeInOutSine'
+        })
+
+        .add({
+            targets : '#text',
+            duration: 1000,
+            marginRight: 0,
+            easing:'easeInOutSine'
+        })
+
+        .add({
+            targets : '#btn',
+            top: '50%',
             duration: 1000,
             easing:'easeInOutSine'
         })
